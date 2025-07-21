@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text-to-Speech App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>🗣️ Text-to-Speech Converter</h1>
+
+    <textarea id="text" placeholder="Type something to speak..."></textarea>
+
+    <div class="form-group">
+      <label for="voiceSelect">Voice</label>
+      <select id="voiceSelect"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="rate">Rate: <span id="rateValue">1</span></label>
+      <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+    </div>
+
+    <div class="form-group">
+      <label for="pitch">Pitch: <span id="pitchValue">1</span></label>
+      <input type="range" id="pitch" min="0" max="2" value="1" step="0.1">
+    </div>
+
+    <div class="button-group">
+      <button onclick="speakText()">🔊 Speak</button>
+      <button onclick="toggleDarkMode()">🌓 Toggle Theme</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
